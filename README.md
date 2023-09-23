@@ -18,7 +18,7 @@ A python script to track the price of the product you were looking to buy for a 
   * `price = soup.find(id="priceblock_ourprice").get_text()` gets you the price of the product, it is inside a  `try` block since during        some offer days the `id` changes to `priceblock_dealprice`, so accordingly I take the price.
   * `price = list(price) price[3] = '.'` this code changes the ',' in `price` to '.'.
   * `conv_price = float("".join(price[2:7]))` this code changes the `price` from string to float. and hence can be used in the if loop.
-
+ 
 ## Sending SMS
 * For this you need to have a Twilio account which will give you the account id and a phone number so you can send SMS.
 * We need to import Client from twilio.rest
